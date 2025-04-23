@@ -1,0 +1,31 @@
+/* This selector is commonly used for resets or global styles */
+
+*,*::before,*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "EB Garamond", serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 20px;
+}
+
+header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  display: flex;
+  max-width: 1440px;
+  margin: auto;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(0,0,0,0.1)
+
+  .logo-holder {
+    .logo {
+    }
+    .logo-text {
+    }
+  }
+}
