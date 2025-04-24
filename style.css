@@ -62,8 +62,9 @@ header {
     margin-left: 10px;
     justify-content: space-between;
     align-items: center;
-    font-weight: 600;
+    font-weight: 1000;
     color: var(--base-800);
+    font-size-adjust: 0.45;
 
     .logo {
       /* height: 100px;
@@ -81,25 +82,27 @@ header {
       height: 64px;
       background-color: inherit;
       object-fit: contain;
-      border-radius: 50px; 
+      border-radius: 50px;
       box-shadow: 0 0 75px rgba(52, 152, 219, 0.75);
     }
-    
+    .logo-text {
+      color: ;
+    }
   }
-  nav{
+  nav {
     display: flex;
     margin-top: 20px;
-    ul{
+    ul {
       display: flex;
       gap: 5px;
       list-style-type: none;
-      li{
+      li {
         display: inline-block;
-        a{
+        a {
           display: inline-block;
           padding: 10px 20px;
           color: var(--base);
-          &:hover{
+          &:hover {
             background-color: var(--base-100);
             border-radius: 100px;
             box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
@@ -108,26 +111,63 @@ header {
         }
       }
     }
-    .mobile-toggle{
+    .mobile-toggle {
       display: none;
       cursor: pointer;
-      color:var(--base-800);
+      color: var(--base-800);
       padding: 10px;
-      @media(max-width:768px){
+      @media (max-width: 768px) {
         display: inline-block;
-        position:absolute;
+        position: absolute;
         top: 20px;
-        right:20px
+        right: 20px;
       }
     }
   }
-  @media (max-width:768px){
-    nav{
-      ul{
-        display: none;
-      }
-    }
-    
+  @media (max-width: 1024px) {
+    flex-direction: column;
+    align-items: center;
   }
 
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+
+    nav {
+      margin-top: 10px;
+      width: 100%;
+      ul {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        &.active {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+
+.hero-container{
+    display: flex;
+    margin-top: 10px;
+    .hero-blue{
+        flex: 1;
+    }
+    .hero-yellow{
+        flex: 1;
+        background-color:rgb(113, 94, 104);
+        /* background-color: var(--yellow); */
+        border-radius: 10px;
+        padding: 0px 30px;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        img{
+            margin-top: -150px;
+            max-width: 420px;
+            margin-bottom: ;
+        }
+    }
 }
