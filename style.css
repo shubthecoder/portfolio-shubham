@@ -485,84 +485,97 @@ h3 {
 }
 
 .work-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-  }
-  
-  .grid-item {
-    flex: 1 1 calc(33.333% - 30px);
-    padding: 30px;
-    background-color: var(--blue-100); 
-    border-radius: 15px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    h3{
-        padding-top: 30px;
+  padding: 30px;;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+}
+
+.grid-item {
+  flex: 1 1 calc(33.333% - 30px);
+  padding: 30px;
+  background-color: var(--blue-100);
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  h3 {
+    padding-top: 30px;
     padding-bottom: 50px;
-    }
-    
-    p{
-        margin-bottom: 15px;
-        letter-spacing: 0.05px;
-    }
-    
   }
-  
-  .grid-item:hover {
-    transform: scale(1.2);
-    overflow: hidden;
+
+  p {
+    margin-bottom: 15px;
+    letter-spacing: 0.05px;
   }
-  
-  .grid-item:nth-child(1) {
-    position: relative;
-    z-index: 1;
-    animation: glowBorder1 3s infinite alternate ease-in-out;
+}
+
+.grid-item:hover {
+  transform: scale(1.2);
+  overflow: hidden;
+}
+
+.grid-item:nth-child(1) {
+  position: relative;
+  z-index: 1;
+  animation: glowBorder1 3s infinite alternate ease-in-out;
+}
+
+.grid-item:nth-child(2) {
+  position: relative;
+  z-index: 1;
+  animation: glowBorder2 2.5s infinite alternate ease-in-out;
+}
+
+@media (max-width: 1024px) {
+  .grid-item {
+    flex: 1 1 calc(50% - 30px);
   }
-  
-  .grid-item:nth-child(2) {
-    position: relative;
-    z-index: 1;
-    animation: glowBorder2 2.5s infinite alternate ease-in-out;
+}
+
+@media (max-width: 768px) {
+  .work-grid {
+    flex-direction: column;
   }
-  
-  @media (max-width: 1024px) {
-    .grid-item {
-      flex: 1 1 calc(50% - 30px);
-    }
+
+  .grid-item {
+    flex: 1 1 100%;
+    height: 240px;
   }
-  
-  @media (max-width: 768px) {
-    .work-grid {
-      flex-direction: column;
-    }
-  
-    .grid-item {
-      flex: 1 1 100%;
-      height: 240px;
-    }
+}
+
+@keyframes glowBorder1 {
+  0% {
+    box-shadow: 0 0 12px #f5ea71, 0 0 24px #f5ea71;
   }
-  
-  @keyframes glowBorder1 {
-    0% {
-      box-shadow: 0 0 12px #f5ea71, 0 0 24px #f5ea71;
-    }
-    50% {
-      box-shadow: 0 0 18px #00ff99, 0 0 36px #00ffcc;
-    }
-    100% {
-      box-shadow: 0 0 12px #3399ff, 0 0 24px #66ccff;
-    }
+  50% {
+    box-shadow: 0 0 18px #00ff99, 0 0 36px #00ffcc;
   }
-  
-  @keyframes glowBorder2 {
-    0% {
-      box-shadow: 0 0 20px #e089a5, 0 0 40px #e089a5;
-    }
-    50% {
-      box-shadow: 0 0 30px #cc00ff, 0 0 40px #9900ff;
-    }
-    100% {
-      box-shadow: 0 0 20px #ff0066, 0 0 40px #ff00cc;
-    }
+  100% {
+    box-shadow: 0 0 12px #3399ff, 0 0 24px #66ccff;
   }
-  
+}
+
+@keyframes glowBorder2 {
+  0% {
+    box-shadow: 0 0 20px #e089a5, 0 0 40px #e089a5;
+  }
+  50% {
+    box-shadow: 0 0 30px #cc00ff, 0 0 40px #9900ff;
+  }
+  100% {
+    box-shadow: 0 0 20px #ff0066, 0 0 40px #ff00cc;
+  }
+}
+footer {
+  background-color:var(--base-400);
+  color:var(--yellow-800);
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  bottom: 0;
+  border-radius: 10px;
+}
+
+footer span {
+  font-weight: bold;
+
+}
